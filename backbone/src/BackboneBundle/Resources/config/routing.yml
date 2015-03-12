@@ -1,0 +1,3 @@
+backbone_index:
+    path:     /
+    defaults: { _controller: BackboneBundle:Index:index }
