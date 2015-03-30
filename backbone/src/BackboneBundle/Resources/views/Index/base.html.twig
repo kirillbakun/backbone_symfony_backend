@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}Backbone application{% endblock %}</title>
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+
+    {% block stylesheets %}
+        {% stylesheets 'bundles/backbone/css/*' filter='cssrewrite' %}
+            <link rel="stylesheet" href="{{ asset_url }}" />
+        {% endstylesheets %}
+    {% endblock %}
+
+    {% block javascripts %}
+        {% javascripts 'public/js/jquery-1.11.2.min.js' %}
+            <script src="{{ asset_url }}"></script>
+        {% endjavascripts %}
+        {% javascripts 'public/js/underscore-min.js' %}
+            <script src="{{ asset_url }}"></script>
+        {% endjavascripts %}
+        {% javascripts 'public/js/backbone-min.js' %}
+            <script src="{{ asset_url }}"></script>
+        {% endjavascripts %}
+        {% javascripts
+            'bundles/backbone/js/models/*'
+            'bundles/backbone/js/collections/*'
+            'bundles/backbone/js/views/*'
+            'bundles/backbone/js/*' %}
+            <script src="{{ asset_url }}"></script>
+        {% endjavascripts %}
+    {% endblock %}
+</head>
+<body>
+{% block body %}{% endblock %}
+</body>
+</html>

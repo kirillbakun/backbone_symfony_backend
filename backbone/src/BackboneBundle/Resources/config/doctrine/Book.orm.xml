@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="BackboneBundle\Entity\Book" table="book">
+    <id name="id" type="integer" column="id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="title" type="string" column="title" length="255" nullable="true"/>
+    <field name="author" type="string" column="author" length="255" nullable="true"/>
+    <field name="releaseDate" type="string" column="release_date" length="30" nullable="true"/>
+    <field name="keywords" type="string" column="keywords" length="255" nullable="true"/>
+    <field name="image" type="string" column="image" length="255" nullable="true"/>
+  </entity>
+</doctrine-mapping>

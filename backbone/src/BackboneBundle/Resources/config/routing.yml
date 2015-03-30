@@ -1,3 +1,23 @@
 backbone_index:
-    path:     /
-    defaults: { _controller: BackboneBundle:Index:index }
+  path: /
+  defaults: { _controller: BackboneBundle:Index:index }
+
+backbone_get_all:
+  path: /get_all
+  defaults: { _controller: BackboneBundle:Index:getAll }
+
+backbone_get:
+  path: /get/{id}
+  defaults: { _controller: BackboneBundle:Index:get }
+
+backbone_add:
+  path: /add
+  defaults: { _controller: BackboneBundle:Index:add }
+
+backbone_update:
+  path: /update/{id}
+  defaults: { _controller: BackboneBundle:Index:update }
+
+backbone_delete:
+  path: /delete/{id}
+  defaults: { _controller: BackboneBundle:Index:delete }
